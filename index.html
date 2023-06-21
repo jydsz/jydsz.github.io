@@ -54,12 +54,18 @@
       <input id= "t3grade" type="number">
       </label>
 
-      <label>Enter what you want for a final grade overall
+      <label>Enter term 4 grade
       <input id= "t4grade" type="number">
+      </label>
+
+      <label>Enter what you want for a final grade overall
+      <input id= "goalGrade" type="number">
       </label>
 
       <br>
       <button id="calculate" type="button">Calculate what grade I need on the final</button>
+
+      <div id="output"></div>
 
 
 
@@ -83,8 +89,23 @@
       </div>
 
 <script>
+  var button = document.getElementById("calculate");
+  
   var onButtonClick = function(){
-    
+    var grade1 = document.getElementById("t1grade").value;
+    var grade2 = document.getElementById("t2grade").value;
+    var grade3 = document.getElementById("t3grade").value;
+    var grade4 = document.getElementById("t4grade").value;
+    var wantedGrade = document.getElementById("goalGrade").value;
+
+    var finalGrade = (((grade1 + grade2 + grade3 + grade4) * 2) + wantedGrade) / 9;
+
+    var result = "You need to get a " + finalGrade + " on the final if you want to have a " + wantedGrade + " for a final overall grade";
+
+    document.getElementById("output").textContent += result;
+  }
+
+  button.addEventListener("click", onButtonClick);
 </script>
       
     </body>
