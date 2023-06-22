@@ -130,7 +130,8 @@ document.getElementById("t3grade").style.alignContent = "center";
     var grade4 = document.getElementById("t4grade").value;
     var wantedGrade = document.getElementById("goalGrade").value;
 
-    var finalGrade = (((grade1 + grade2 + grade3 + grade4) * 2) + wantedGrade) / 9;
+   // var finalGrade = (((grade1 + grade2 + grade3 + grade4) * 2) + wantedGrade) / 9;
+    var finalGrade = grade1 + grade2 + grade3 + grade4;
 
     var result = "You need to get a " + finalGrade + " on the final if you want to have a " + wantedGrade + " for a final overall grade";
 
