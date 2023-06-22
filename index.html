@@ -124,11 +124,11 @@ document.getElementById("t3grade").style.alignContent = "center";
   var button = document.getElementById("calculate");
   
   var onButtonClick = function(){
-    var grade1 = document.getElementById("t1grade").value;
-    var grade2 = document.getElementById("t2grade").value;
-    var grade3 = document.getElementById("t3grade").value;
-    var grade4 = document.getElementById("t4grade").value;
-    var wantedGrade = document.getElementById("goalGrade").value;
+    var grade1 = parseFloat(document.getElementById("t1grade").value, radix);
+    var grade2 = parseFloat(document.getElementById("t2grade").value, radix);
+    var grade3 = parseFloat(document.getElementById("t3grade").value, radix);
+    var grade4 = parseFloat(document.getElementById("t4grade").value, radix);
+    var wantedGrade = parseFloat(document.getElementById("goalGrade").value, radix);
 
     var finalGrade = grade1;
     finalGrade += grade2;
